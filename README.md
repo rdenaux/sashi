@@ -13,7 +13,7 @@ In order to make this process easy to automate, I've developed various methods t
 In order to use this library you'll need a python environment with a recent version of Keras, numpy, pandas, etc. Of course, having a GPU will speed up the training part.
 
 ## Jupyter notebook
-To execute and inspect the approach you can execute the `Sanushi.ipynb` file on a local Jupyter server (or on Google Collaboratory). This notebook provides some explanation of what is happening at each step of the process. Also, it provides an initial step for downloading the dataset and splitting it into a test and validation subset.
+To execute and inspect the approach you can execute the `Sanushi.ipynb` file on a local Jupyter server (or on [Google Collaboratory](https://colab.research.google.com/github/rdenaux/sashi/blob/master/Sanushi.ipynb)). The notebook provides some explanation of what is happening at each step of the process. Also, it provides an initial step for downloading the dataset and splitting it into a test and validation subset.
 
 ## Standalone execution
 Since one of the requirements is full automation. I include `run.py` which provides a command-line script that can be executed for a given dataset. The main execution looks as follows:
@@ -29,6 +29,8 @@ The `train_dir`, `valid_dir` and `img_dir` values should be a folder with subfol
  
 Although the command-line interface requires three separate folders, if you are a bad person, you can pass the same folder to use the same dataset for training, validation and candidate selection.
 
+ * The `json_params` is optional and should point to a json file with parameters required by the `kmodel` library. The repo includes `default_params.json` which provides an example of config values which seem to work OK. See `kmodel/kmodel.py` for a `sample_params` dict with comments describing (more or less) what each parameter means. If you understand the basic approach it should be clear what most parameters mean.
+ 
 The output is a file called `sanushi_candidates.csv` which provides the top 20 most ambiguous images.
 
 ## Justifications

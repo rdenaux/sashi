@@ -1,0 +1,29 @@
+{
+    "num_classes": 2,
+    "class_mode": "categorical",
+    "train_loss": "categorical_crossentropy",
+    "train_metrics": [
+        "accuracy"
+    ],
+    "batch_size": 16,
+    "top": {
+        "hidden_dense": [
+            1024
+        ],
+        "hidden_dropout_rate": 0.2,
+        "activation": "softmax"
+    },
+    "top_train": {
+        "opt": "adam",
+        "epochs": 15,
+        "checkpoint_path": "cp.top.best.hdf5"
+    },
+    "fine_train": {
+        "lr": 0.0001,
+        "momentum": 0.9,
+        "epochs": 5,
+        "checkpoint_path": "cp.fine_tuned.best.hdf5",
+        "freeze_n_layers": 172
+    },
+    "checkpoint_path": "final_weights.hdf5"
+}
