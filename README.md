@@ -13,7 +13,7 @@ In order to make this process easy to automate, I've developed various methods t
 In order to use this library you'll need a python environment with a recent version of Keras, numpy, pandas, etc. Of course, having a GPU will speed up the training part.
 
 ## Jupyter notebook
-To execute and inspect the approach you can execute the `Sanushi.ipynb` file on a local Jupyter server (or on [Google Collaboratory](https://colab.research.google.com/github/rdenaux/sashi/blob/master/Sanushi.ipynb)). The notebook provides some explanation of what is happening at each step of the process. Also, it provides an initial step for downloading the dataset and splitting it into a test and validation subset.
+To execute and inspect the approach you can execute the `Sanushi.ipynb` file on a local Jupyter server or on [Google Collaboratory](https://colab.research.google.com/github/rdenaux/sashi/blob/master/Sanushi.ipynb). The notebook provides some explanation of what is happening at each step of the process. Also, it provides an initial step for downloading the dataset and splitting it into a test and validation subset.
 
 ## Standalone execution
 Since one of the requirements is full automation. I include `run.py` which provides a command-line script that can be executed for a given dataset. The main execution looks as follows:
